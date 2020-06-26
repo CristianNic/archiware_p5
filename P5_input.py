@@ -12,6 +12,7 @@ print(out2)
 print('---------')
 
 cmd = ['/usr/local/aw/bin', './nsdchat -c License resources']
+file = file
 subprocess.Popen(cmd, stdout=file)
 os.chdir('/private/tmp/')
 file = open("output.txt", "w")
