@@ -42,6 +42,7 @@ proc = subprocess.Popen(cmd, shell=False,
                         stderr=subprocess.PIPE)
 
 file = open("output.txt", "w")
+os.chdir('/private/tmp/')
 subprocess.stdout.file.write(proc)
 file.close()
 
