@@ -42,7 +42,7 @@ proc = subprocess.Popen(cmd, shell=False,
                         stderr=subprocess.PIPE)
 
 file = open("output.txt", "w")
-subprocess.stdout.write(file)
+subprocess.stdout.file.write(proc)
 file.close()
 
 print(output)
