@@ -2,15 +2,13 @@ import subprocess
 import os
 import sys
 
-subprocess.call(['df', '-h'])
-print('---------')
-
-subprocess.call(['ls', '-ls'])
+out = subprocess.call(['df', '-h'])
+print(out)
 print('---------')
 
 cmd = ['ls', '-ls']
-out = subprocess.Popen(cmd)
-print(out)
+out2 = subprocess.Popen(cmd)
+print(out2)
 print('---------')
 
 cmd = ['/usr/local/aw/bin', './nsdchat -c License resources']
