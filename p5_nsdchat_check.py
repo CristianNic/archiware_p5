@@ -45,17 +45,3 @@ def nsdchat_munkireport_formating():
 nsdchat_check()
 nsdchat_munkireport_formating()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
