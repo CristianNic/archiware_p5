@@ -12,7 +12,7 @@ def nsdchat_check():
         '/usr/local/aw/bin/nsdchat -c srvinfo server',
         '/usr/local/aw/bin/nsdchat -c srvinfo lexxvers',
         '/usr/local/aw/bin/nsdchat -c srvinfo buildstamp',
-        '/usr/local/aw/bin/nsdchat -c srvinfo address'
+        '/usr/local/aw/bin/nsdchat -c srvinfo address',
          '/usr/local/aw/bin/nsdchat -c srvinfo uptime']
 
     output_file = open('temp.txt', 'wt')
