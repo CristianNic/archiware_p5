@@ -12,7 +12,8 @@ def nsdchat_check():
         '/usr/local/aw/bin/nsdchat -c srvinfo server',
         '/usr/local/aw/bin/nsdchat -c srvinfo lexxvers',
         '/usr/local/aw/bin/nsdchat -c srvinfo buildstamp',
-        '/usr/local/aw/bin/nsdchat -c srvinfo address']
+        '/usr/local/aw/bin/nsdchat -c srvinfo address'
+         '/usr/local/aw/bin/nsdchat -c srvinfo uptime']
 
     output_file = open('temp.txt', 'wt')
 
@@ -29,7 +30,7 @@ def nsdchat_check():
 def nsdchat_munkireport_formating():
 
     keys = ['license', 'hostid', 'version', 'port', 'hostname',
-            'platform', 'server', 'lexxvers', 'buildstamp', 'address']
+            'platform', 'server', 'lexxvers', 'buildstamp', 'address','uptime']
     values = []
 
     with open('temp.txt', 'rt') as f:
