@@ -10,6 +10,9 @@
 
 /usr/local/aw/bin/nsdchat -c srvinfo buildstamp > /private/tmp/p5input-buildstamp.txt ; open /private/tmp/p5input-buildstamp.txt
 /usr/local/aw/bin/nsdchat -c srvinfo address > /private/tmp/p5input-address.txt ; open /private/tmp/p5input-address.txt
+<<<<<<< HEAD
 /usr/local/aw/bin/nsdchat -c srvinfo server > /private/tmp/p5input-server.txt ; open /private/tmp/p5input-server.txt
 /usr/local/aw/bin/nsdchat -c srvinfo hostname > /private/tmp/p5input-hostname.txt ; open /private/tmp/p5input-hostname.txt
 /usr/local/aw/bin/nsdchat -c srvinfo version > /private/tmp/p5input-version.txt ; open /private/tmp/p5input-version.txt
+=======
+>>>>>>> 1b00b6a8b92e13fe3e23dbda2784e12d3a054f55

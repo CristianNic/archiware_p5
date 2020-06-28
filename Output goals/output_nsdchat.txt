@@ -1,0 +1,11 @@
+license = ArchivePlan BackupPlan SyncPlan Backup2Go Client ThinClient VirtClient Device Jukebox DesktopLinks
+hostid = 9083ed6d-0401
+version = 4.99
+port = 8000
+hostname = xMBPx2-3.local
+platform = osx
+server = lexxsrv
+lexxvers = 6.0.1
+buildstamp = 202003091432
+address = fe80::c68:c16c:aef2:91a2
+uptime = 930010

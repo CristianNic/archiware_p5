@@ -23,7 +23,7 @@ def nsdchat_check():
                             stdout=output_file,
                             stderr=subprocess.PIPE)
         (output, err) = proc.communicate()
-        print(output, end='')
+        print(output)
 
     output_file.close()
 
@@ -45,7 +45,3 @@ def nsdchat_munkireport_formating():
 
 nsdchat_check()
 nsdchat_munkireport_formating()
-
-
-
-
