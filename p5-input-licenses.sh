@@ -19,4 +19,3 @@
 /usr/local/aw/bin/nsdchat -c srvinfo buildstamp > /private/tmp/p5input-buildstamp.txt ; open /private/tmp/p5input-buildstamp.txt
 
 /usr/local/aw/bin/nsdchat -c srvinfo address > /private/tmp/p5input-address.txt ; open /private/tmp/p5input-address.txt
-
