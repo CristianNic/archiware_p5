@@ -1,0 +1,11 @@
+uptime = 33339
+hostid = 37ec387d-0401
+license = ArchivePlan BackupPlan SyncPlan Backup2Go Client ThinClient VirtClient Device Jukebox DesktopLinks
+lexxvers = 6.0.1
+hostname = MP-2.local
+server = lexxsrv
+platform = osx
+version = 4.99
+buildstamp = 202003091432
+port = 8000
+address = ::
