@@ -13,4 +13,4 @@ hostid = 37ec387d-0401
 port = 8000
 platform = osx
 lexxvers = 6.0.1
-uptime = 10.1 h
+uptime = 16.9 hours
