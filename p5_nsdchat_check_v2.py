@@ -46,7 +46,7 @@ def nsdchat_munkireport_formating():
             values.append(line.rstrip())
 
     dictionary = collections.OrderedDict(zip(keys,values))
-    dictionary['uptime'] = str(round((float(dictionary['uptime'])/3600), 1))+" h"
+    dictionary['uptime'] = str(round((float(dictionary['uptime'])/3600), 1))+" hours"
 
     f = open("output_nsdchat.txt","w")
     f.write("\n".join("{} = {}".format(k, v) for k, v in dictionary.items()))
