@@ -1,3 +1,7 @@
+#!/usr/bin/python
+# Archiware P5 script for MunkiReport
+# by MatX Macvfx and CristianNic for MunkiReport
+
 import os
 import subprocess
 import collections
@@ -48,10 +52,23 @@ def nsdchat_munkireport_formating():
     dictionary = collections.OrderedDict(zip(keys,values))
     dictionary['uptime'] = str(round((float(dictionary['uptime'])/3600), 1))+" hours"
 
-    f = open("output_nsdchat.txt","w")
+    f = open("archiware_p5.txt","w")
     f.write("\n".join("{} = {}".format(k, v) for k, v in dictionary.items()))
     f.close()
     os.remove('temp.txt')
 
-nsdchat_check()
-nsdchat_munkireport_formating()
+def main():
+    """Main"""
+    # Check if Archiware P5 is installed
+    if  not os.path.isfile('/usr/local/aw/bin/nsdchat'):
+        print "ERROR: Archiware P5 is not installed"
+        exit(0)
+
+    # Get information about Archiware P5
+    nsdchat_check()
+
+    # Write results to cache
+    nsdchat_munkireport_formating()
+
+if __name__ == "__main__":
+    main()

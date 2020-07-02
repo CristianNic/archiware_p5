@@ -1,0 +1,40 @@
+i18n_title: archiware_p5.listing.title
+table:
+    -   column: machine.computer_name
+        i18n_header: listing.computername
+        formatter: clientDetail
+        tab_link: archiware_p5
+    -   column: reportdata.serial_number
+        i18n_header: serial
+    -   column: archiware_p5.license_resources
+        i18n_header: archiware_p5.column.license_resources
+    -   column: archiware_p5.archive_plan
+        i18n_header: archiware_p5.column.archive_plan
+    -   column: archiware_p5.backup_plan
+        i18n_header: archiware_p5.column.backup_plan
+    -   column: archiware_p5.sync_plan
+        i18n_header: archiware_p5.column.sync_plan
+    -   column: archiware_p5.backup2go
+        i18n_header: archiware_p5.column.backup2go
+    -   column: archiware_p5.client
+        i18n_header: archiware_p5.column.client
+    -   column: archiware_p5.thin_client
+        i18n_header: archiware_p5.column.thin_client
+    -   column: archiware_p5.virtual_client
+        i18n_header: archiware_p5.column.virtual_client
+    -   column: archiware_p5.device
+        i18n_header: archiware_p5.column.device
+    -   column: archiware_p5.jukebox
+        i18n_header: archiware_p5.column.jukebox
+    -   column: archiware_p5.desktop_links
+        i18n_header: archiware_p5.column.desktop_links
+    -   column: archiware_p5.host_id
+        i18n_header: archiware_p5.column.host_id
+    -   column: archiware_p5.port
+        i18n_header: archiware_p5.column.port
+    -   column: archiware_p5.platform
+        i18n_header: archiware_p5.column.platform
+    -   column: archiware_p5.p5_version
+        i18n_header: archiware_p5.column.p5_version
+    -   column: archiware_p5.uptime
+        i18n_header: archiware_p5.column.uptime

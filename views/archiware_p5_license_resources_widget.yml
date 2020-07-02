@@ -1,0 +1,8 @@
+type: scrollbox
+widget_id: archiware_p5-license_resources-scrollbox-widget
+api_url: /module/archiware_p5/get_list/license_resources
+i18n_title: archiware_p5.widget.license_resources_title
+icon: fa-laptop
+listing_link: /show/listing/archiware_p5/archiware_p5
+search_key: label
+badge: count

@@ -1,0 +1,8 @@
+type: scrollbox
+widget_id: archiware_p5-p5_version-scrollbox-widget
+api_url: /module/archiware_p5/get_list/p5_version
+i18n_title: archiware_p5.widget.p5_version_title
+icon: fa-laptop
+listing_link: /show/listing/archiware_p5/archiware_p5
+search_key: label
+badge: count

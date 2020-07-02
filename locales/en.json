@@ -1,0 +1,45 @@
+{
+    "column": {
+        "license_resources": "License Resources",
+        "archive_plan": "Archive Plan",
+        "backup_plan": "Backup Plan",
+        "sync_plan": "Sync Plan",
+        "backup2go": "Backup2Go",
+        "client": "Client",
+        "thin_client": "Thin Client",
+        "virtual_client": "Virtual Client",
+        "device": "Device",
+        "jukebox": "Jukebox",
+        "desktop_links": "Desktop Links",
+        "host_id": "Host ID",
+        "port": "Port",
+        "platform": "Platform",
+        "p5_version": "P5 Version",
+        "uptime": "Uptime"
+    },
+    "listing": {
+        "title": "Archiware P5"
+    },
+    "report": {
+        "title": "Archiware P5"
+    },
+    "title": "Archiware P5",
+    "widget": {
+        "license_resources_title": "License Resources",
+        "archive_plan_title": "Archive Plan",
+        "backup_plan_title": "Backup Plan",
+        "sync_plan_title": "Sync Plan",
+        "backup2go_title": "Backup2Go",
+        "client_title": "Client",
+        "thin_client_title": "Thin Client",
+        "virtual_client_title": "Virtual Client",
+        "device_title": "Device",
+        "jukebox_title": "Jukebox",
+        "desktop_links_title": "Desktop Links",
+        "host_id_title": "Host ID",
+        "port_title": "Port",
+        "platform_title": "Platform",
+        "p5_version_title": "P5 Version",
+        "uptime_title": "Uptime"
+    }
+}
