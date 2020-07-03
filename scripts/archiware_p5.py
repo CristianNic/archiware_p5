@@ -55,9 +55,7 @@ def nsdchat_check():
 
     dictionary['uptime'] = str("%dd %dh %dm" % (day, hour, minutes))
 
-    f = open("archiware_p5.txt","w")
-    f.write("\n".join("{} = {}".format(k, v) for k, v in dictionary.items()))
-    f.close()
+    return dictionary
 
 def main():
     """Main"""
@@ -77,8 +75,14 @@ def main():
             print ('Manual check: skipping')
             exit(0)
 
-    # Get information about Archiware P5 and write to cache
-    nsdchat_check()
+    # Get information about Archiware P5
+    result = nsdchat_check()
+
+    # Write results to cache
+    os.chdir(cachedir)
+    f = open("archiware_p5.txt","wt")
+    f.write("\n".join("{} = {}".format(k, v) for k, v in result.items()))
+    f.close()
 
 if __name__ == "__main__":
     main()
