@@ -1,4 +1,3 @@
-license resources = ArchivePlan BackupPlan SyncPlan Backup2Go Client ThinClient VirtClient Device Jukebox DesktopLinks
 ArchivePlan = unlimited
 BackupPlan = unlimited
 SyncPlan = unlimited
@@ -13,4 +12,4 @@ hostid = 37ec387d-0401
 port = 8000
 platform = osx
 lexxvers = 6.0.1
-uptime = 0d 6h 3m
+uptime = 0d 6h 11m

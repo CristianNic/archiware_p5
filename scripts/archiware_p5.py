@@ -8,8 +8,7 @@ import collections
 
 def nsdchat_check():
 
-    cmds = ['/usr/local/aw/bin/nsdchat -c License resources',
-        '/usr/local/aw/bin/nsdchat -c License ArchivePlan free',
+    cmds = ['/usr/local/aw/bin/nsdchat -c License ArchivePlan free',
         '/usr/local/aw/bin/nsdchat -c License BackupPlan free',
         '/usr/local/aw/bin/nsdchat -c License SyncPlan free',
         '/usr/local/aw/bin/nsdchat -c License Backup2Go free',
@@ -38,10 +37,9 @@ def nsdchat_check():
     values = [s.strip('\n') for s in out]
     values = [s.replace('-1', 'unlimited').rstrip() for s in out]
 
-    keys = ['license resources', 'ArchivePlan', 'BackupPlan', 'SyncPlan',
-            'Backup2Go', 'Client', 'ThinClient', 'VirtClient', 'Device',
-            'Jukebox', 'DesktopLinks', 'hostid', 'port', 'platform',
-            'lexxvers', 'uptime']
+    keys = ['ArchivePlan', 'BackupPlan', 'SyncPlan', 'Backup2Go', 'Client',
+            'ThinClient', 'VirtClient', 'Device', 'Jukebox', 'DesktopLinks',
+            'hostid', 'port', 'platform', 'lexxvers', 'uptime']
 
     dictionary = collections.OrderedDict(zip(keys,values))
 
