@@ -1,8 +1,8 @@
-#!/usr/bin/python
+#!/usr/local/munki/python
 # Archiware P5 script for MunkiReport
-# by MatX Macvfx and CristianNic for MunkiReport
 
 import os
+import sys
 import subprocess
 import collections
 
@@ -25,50 +25,60 @@ def nsdchat_check():
         '/usr/local/aw/bin/nsdchat -c srvinfo lexxvers',
         '/usr/local/aw/bin/nsdchat -c srvinfo uptime',]
 
-    output_file = open('temp.txt', 'wt')
+    out = []
 
     for cmd in cmds:
-        proc = subprocess.Popen(cmd, shell=True, universal_newlines=True,
+        proc = subprocess.Popen(cmd, text=True, shell=True,
                             stdin=subprocess.PIPE,
-                            stdout=output_file,
+                            stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE)
-        (output, err) = proc.communicate()
-        print(output)
+        output, err = proc.communicate()
+        out.append(output)
 
-    output_file.close()
-
-def nsdchat_munkireport_formating():
+    values = [s.strip('\n') for s in out]
+    values = [s.replace('-1', 'unlimited').rstrip() for s in out]
 
     keys = ['license resources', 'ArchivePlan', 'BackupPlan', 'SyncPlan',
             'Backup2Go', 'Client', 'ThinClient', 'VirtClient', 'Device',
             'Jukebox', 'DesktopLinks', 'hostid', 'port', 'platform',
             'lexxvers', 'uptime']
-    values = []
-
-    with open('temp.txt', 'rt') as f:
-        for line in f:
-            values.append(line.rstrip())
 
     dictionary = collections.OrderedDict(zip(keys,values))
-    dictionary['uptime'] = str(round((float(dictionary['uptime'])/3600), 1))+" hours"
+
+    time = round(float(dictionary['uptime']), 1)
+    day = time / (24 * 3600)
+    time = time % (24 * 3600)
+    hour = time / 3600
+    time = time % 3600
+    minutes = time / 60
+    seconds = time
+
+    dictionary['uptime'] = str("%dd %dh %dm" % (day, hour, minutes))
 
     f = open("archiware_p5.txt","w")
     f.write("\n".join("{} = {}".format(k, v) for k, v in dictionary.items()))
     f.close()
-    os.remove('temp.txt')
 
 def main():
     """Main"""
     # Check if Archiware P5 is installed
     if  not os.path.isfile('/usr/local/aw/bin/nsdchat'):
-        print "ERROR: Archiware P5 is not installed"
+        print ("ERROR: Archiware P5 is not installed")
         exit(0)
 
-    # Get information about Archiware P5
-    nsdchat_check()
+    # Create cache dir if it does not exist
+    cachedir = '%s/cache' % os.path.dirname(os.path.realpath(__file__))
+    if not os.path.exists(cachedir):
+        os.makedirs(cachedir)
 
-    # Write results to cache
-    nsdchat_munkireport_formating()
+    # Skip manual check
+    if len(sys.argv) > 1:
+        if sys.argv[1] == 'manualcheck':
+            print ('Manual check: skipping')
+            exit(0)
+
+    # Get information about Archiware P5 and write to cache
+    nsdchat_check()
 
 if __name__ == "__main__":
     main()
