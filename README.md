@@ -27,4 +27,4 @@ Table Schema
 * Virtual Client  - VARCHAR(255) - If VirtClient is licensed and amount of licenses available
 * Device          - VARCHAR(255) - If Device is licensed and amount of licenses available
 * Jukebox         - VARCHAR(255) - If Jukebox is licensed and amount of licenses available
-* Desktop Links   - VARCHAR(255) - If Archive App is installed / licenses available
+* Desktop Links   - VARCHAR(255) - If Archive App is installed and amount of licenses available
