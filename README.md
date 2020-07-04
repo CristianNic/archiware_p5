@@ -1,7 +1,7 @@
 Archiware P5 Module
 ====================
 
-Reports Archiware P5 data on the clients.
+Reports Archiware P5 client data to MunkiReport.
 
 Notes
 -----
