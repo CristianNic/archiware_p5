@@ -28,4 +28,3 @@ Table Schema
 * Platform        - VARCHAR(255) - OS client is running on
 * P5 Version      - VARCHAR(255) - P5 Server Version
 * Uptime          - VARCHAR(255) - Time client has been running
-s
