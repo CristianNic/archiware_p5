@@ -1,6 +1,5 @@
 {
     "column": {
-        "license_resources": "License Resources",
         "archive_plan": "Archive Plan",
         "backup_plan": "Backup Plan",
         "sync_plan": "Sync Plan",
@@ -25,7 +24,6 @@
     },
     "title": "Archiware P5",
     "widget": {
-        "license_resources_title": "License Resources",
         "archive_plan_title": "Archive Plan",
         "backup_plan_title": "Backup Plan",
         "sync_plan_title": "Sync Plan",

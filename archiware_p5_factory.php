@@ -7,7 +7,6 @@
 $factory->define(Archiware_p5_model::class, function (Faker\Generator $faker) {
 
     return [
-        'license_resources' => $faker->word(),
         'archive_plan' => $faker->word(),
         'backup_plan' => $faker->word(),
         'sync_plan' => $faker->word(),

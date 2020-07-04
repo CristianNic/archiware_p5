@@ -6,8 +6,6 @@ table:
         tab_link: archiware_p5
     -   column: reportdata.serial_number
         i18n_header: serial
-    -   column: archiware_p5.license_resources
-        i18n_header: archiware_p5.column.license_resources
     -   column: archiware_p5.archive_plan
         i18n_header: archiware_p5.column.archive_plan
     -   column: archiware_p5.backup_plan

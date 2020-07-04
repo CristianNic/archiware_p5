@@ -11,7 +11,6 @@ class ArchiwareP5Init extends Migration
         $capsule::schema()->create('archiware_p5', function (Blueprint $table) {
             $table->increments('id');
             $table->string('serial_number');
-            $table->string('license_resources')->nullable();
             $table->string('archive_plan')->nullable();
             $table->string('backup_plan')->nullable();
             $table->string('sync_plan')->nullable();
@@ -29,7 +28,6 @@ class ArchiwareP5Init extends Migration
             $table->string('uptime')->nullable();
 
             $table->unique('serial_number');
-            $table->index('license_resources');
             $table->index('archive_plan');
             $table->index('backup_plan');
             $table->index('sync_plan');

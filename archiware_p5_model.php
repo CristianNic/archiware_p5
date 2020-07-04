@@ -10,7 +10,6 @@ class Archiware_p5_model extends Eloquent
 
     protected $fillable = [
       'serial_number',
-      'license_resources',
       'archive_plan',
       'backup_plan',
       'sync_plan',

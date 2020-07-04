@@ -11,8 +11,6 @@ reports:
         view: archiware_p5_report
         i18n: archiware_p5.report.title
 widgets:
-    archiware_p5_license_resources:
-        view: archiware_p5_license_resources_widget
     archiware_p5_archive_plan:
         view: archiware_p5_archive_plan_widget
     archiware_p5_backup_plan:
