@@ -35,11 +35,11 @@ def nsdchat_check():
         out.append(output)
 
     values = [s.strip('\n') for s in out]
-    values = [s.replace('-1', 'unlimited').rstrip() for s in out]
+    values = [s.replace('-1', u'\u221E').rstrip() for s in out]
 
-    keys = ['ArchivePlan', 'BackupPlan', 'SyncPlan', 'Backup2Go', 'Client',
-            'ThinClient', 'VirtClient', 'Device', 'Jukebox', 'DesktopLinks',
-            'hostid', 'port', 'platform', 'lexxvers', 'uptime']
+    keys = ['archive_plan', 'backup_plan', 'sync_plan', 'backup2go', 'client',
+            'thin_client', 'virtual_client', 'device', 'jukebox', 'desktop_links',
+            'host_id', 'port', 'platform', 'p5_version', 'uptime']
 
     dictionary = collections.OrderedDict(zip(keys,values))
 
