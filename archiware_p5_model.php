@@ -10,6 +10,11 @@ class Archiware_p5_model extends Eloquent
 
     protected $fillable = [
       'serial_number',
+      'host_id',
+      'port',
+      'platform',
+      'p5_version',
+      'uptime',
       'archive_plan',
       'backup_plan',
       'sync_plan',
@@ -20,11 +25,6 @@ class Archiware_p5_model extends Eloquent
       'device',
       'jukebox',
       'desktop_links',
-      'host_id',
-      'port',
-      'platform',
-      'p5_version',
-      'uptime',
 
     ];
 }

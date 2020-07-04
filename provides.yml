@@ -11,6 +11,16 @@ reports:
         view: archiware_p5_report
         i18n: archiware_p5.report.title
 widgets:
+    archiware_p5_host_id:
+        view: archiware_p5_host_id_widget
+    archiware_p5_port:
+        view: archiware_p5_port_widget
+    archiware_p5_platform:
+        view: archiware_p5_platform_widget
+    archiware_p5_p5_version:
+        view: archiware_p5_p5_version_widget
+    archiware_p5_uptime:
+        view: archiware_p5_uptime_widget
     archiware_p5_archive_plan:
         view: archiware_p5_archive_plan_widget
     archiware_p5_backup_plan:
@@ -31,13 +41,3 @@ widgets:
         view: archiware_p5_jukebox_widget
     archiware_p5_desktop_links:
         view: archiware_p5_desktop_links_widget
-    archiware_p5_host_id:
-        view: archiware_p5_host_id_widget
-    archiware_p5_port:
-        view: archiware_p5_port_widget
-    archiware_p5_platform:
-        view: archiware_p5_platform_widget
-    archiware_p5_p5_version:
-        view: archiware_p5_p5_version_widget
-    archiware_p5_uptime:
-        view: archiware_p5_uptime_widget

@@ -1,3 +1,8 @@
+host_id = 123456789-1234
+port = 8000
+platform = osx
+p5_version = 6.0.1
+uptime = 0d 4h 39m
 archive_plan = ∞
 backup_plan = ∞
 sync_plan = ∞
@@ -8,8 +13,3 @@ virtual_client = ∞
 device = ∞
 jukebox = ∞
 desktop_links = ∞
-host_id = 37ec387d-0401
-port = 8000
-platform = osx
-p5_version = 6.0.1
-uptime = 0d 10h 25m

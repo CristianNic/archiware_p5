@@ -1,5 +1,10 @@
 {
     "column": {
+        "host_id": "Host ID",
+        "port": "Port",
+        "platform": "Platform",
+        "p5_version": "P5 Version",
+        "uptime": "Uptime",
         "archive_plan": "Archive Plan",
         "backup_plan": "Backup Plan",
         "sync_plan": "Sync Plan",
@@ -9,12 +14,7 @@
         "virtual_client": "Virtual Client",
         "device": "Device",
         "jukebox": "Jukebox",
-        "desktop_links": "Desktop Links",
-        "host_id": "Host ID",
-        "port": "Port",
-        "platform": "Platform",
-        "p5_version": "P5 Version",
-        "uptime": "Uptime"
+        "desktop_links": "Desktop Links"
     },
     "listing": {
         "title": "Archiware P5"
@@ -24,6 +24,11 @@
     },
     "title": "Archiware P5",
     "widget": {
+        "host_id_title": "Host ID",
+        "port_title": "Port",
+        "platform_title": "Platform",
+        "p5_version_title": "P5 Version",
+        "uptime_title": "Uptime",
         "archive_plan_title": "Archive Plan",
         "backup_plan_title": "Backup Plan",
         "sync_plan_title": "Sync Plan",
@@ -33,11 +38,6 @@
         "virtual_client_title": "Virtual Client",
         "device_title": "Device",
         "jukebox_title": "Jukebox",
-        "desktop_links_title": "Desktop Links",
-        "host_id_title": "Host ID",
-        "port_title": "Port",
-        "platform_title": "Platform",
-        "p5_version_title": "P5 Version",
-        "uptime_title": "Uptime"
+        "desktop_links_title": "Desktop Links"
     }
 }
