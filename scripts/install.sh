@@ -12,7 +12,7 @@ if [ $? = 0 ]; then
 	chmod a+x "${MUNKIPATH}preflight.d/archiware_p5.py"
 
 	# Set preference to include this file in the preflight check
-	setreportpref "archiware_p5" "${CACHEPATH}archiware_p5.txt"
+	setreportpref "archiware_p5" "${CACHEPATH}archiware_p5.plist"
 
 else
 	echo "Failed to download all required components!"

@@ -1,10 +1,12 @@
 #!/usr/local/munki/python
 # Archiware P5 script for MunkiReport
+# by Cristian Niculescu
 
 import os
 import sys
 import subprocess
 import collections
+import plistlib
 
 def nsdchat_check():
 
@@ -44,6 +46,8 @@ def nsdchat_check():
 
     dictionary = collections.OrderedDict(zip(keys,values))
 
+    dictionary['port'] = int(dictionary['port'])
+
     time = round(float(dictionary['uptime']), 1)
     day = time / (24 * 3600)
     time = time % (24 * 3600)
@@ -78,10 +82,8 @@ def main():
     result = nsdchat_check()
 
     # Write results to cache
-    os.chdir(cachedir)
-    f = open("archiware_p5.txt","wt")
-    f.write("\n".join("{} = {}".format(k, v) for k, v in result.items()))
-    f.close()
+    output_plist = open(os.path.join(cachedir, 'archiware_p5.plist'), 'wb')
+    plistlib.dump(result, output_plist, sort_keys=False)
 
 if __name__ == "__main__":
     main()

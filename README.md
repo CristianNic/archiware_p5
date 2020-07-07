@@ -14,7 +14,7 @@ Table Schema
 -----
 
 * Host ID         - VARCHAR(255) - Client ID number
-* Port            - VARCHAR(255) - Port Server is running on
+* Port            - Integer      - Port Server is running on
 * Platform        - VARCHAR(255) - Platform client is running on (linux, freeBSD, windows, macOS)
 * P5 Version      - VARCHAR(255) - P5 software Version
 * Uptime          - VARCHAR(255) - Amount of time P5 software has been running

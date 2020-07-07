@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>host_id</key>
+	<string>37ec387d-0401</string>
+	<key>port</key>
+	<integer>8000</integer>
+	<key>platform</key>
+	<string>osx</string>
+	<key>p5_version</key>
+	<string>6.0.1</string>
+	<key>uptime</key>
+	<string>0d 13h 50m</string>
+	<key>archive_plan</key>
+	<string>∞</string>
+	<key>backup_plan</key>
+	<string>∞</string>
+	<key>sync_plan</key>
+	<string>∞</string>
+	<key>backup2go</key>
+	<string>∞</string>
+	<key>client</key>
+	<string>∞</string>
+	<key>thin_client</key>
+	<string>∞</string>
+	<key>virtual_client</key>
+	<string>∞</string>
+	<key>device</key>
+	<string>∞</string>
+	<key>jukebox</key>
+	<string>∞</string>
+	<key>desktop_links</key>
+	<string>∞</string>
+</dict>
+</plist>

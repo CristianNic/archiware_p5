@@ -10,9 +10,9 @@ class ArchiwareP5Init extends Migration
         $capsule = new Capsule();
         $capsule::schema()->create('archiware_p5', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('serial_number');
+            $table->string('serial_number')->unique();
             $table->string('host_id')->nullable();
-            $table->string('port')->nullable();
+            $table->integer('port')->nullable();
             $table->string('platform')->nullable();
             $table->string('p5_version')->nullable();
             $table->string('uptime')->nullable();
@@ -27,7 +27,6 @@ class ArchiwareP5Init extends Migration
             $table->string('jukebox')->nullable();
             $table->string('desktop_links')->nullable();
 
-            $table->unique('serial_number');
             $table->index('host_id');
             $table->index('port');
             $table->index('platform');
@@ -43,10 +42,9 @@ class ArchiwareP5Init extends Migration
             $table->index('device');
             $table->index('jukebox');
             $table->index('desktop_links');
-
         });
     }
-    
+
     public function down()
     {
         $capsule = new Capsule();

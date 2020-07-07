@@ -8,7 +8,7 @@ $factory->define(Archiware_p5_model::class, function (Faker\Generator $faker) {
 
     return [
         'host_id' => $faker->word(),
-        'port' => $faker->word(),
+        'port' => $faker->randomNumber($nbDigits = 4, $strict = false),
         'platform' => $faker->word(),
         'p5_version' => $faker->word(),
         'uptime' => $faker->word(),
