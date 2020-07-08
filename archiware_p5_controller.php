@@ -63,19 +63,17 @@ class Archiware_p5_controller extends Module_controller
         );
     }
 
-/**
-*    public function get_list($column = '')
-*    {
-*        jsonView(
-*            Archiware_p5_model::select($column . ' AS label')
-*                ->selectRaw('count(*) AS count')
-*                ->filter()
-*                ->groupBy($column)
-*                ->orderBy('count', 'desc')
-*                ->get()
-*                ->toArray()
-*        );
-*    }
-**/
+    public function get_list($column = '')
+    {
+        jsonView(
+            Archiware_p5_model::select($column . ' AS label')
+                ->selectRaw('count(*) AS count')
+                ->filter()
+                ->groupBy($column)
+                ->orderBy('count', 'desc')
+                ->get()
+                ->toArray()
+        );
+    }
 
 } // End class Archiware_p5_controller
