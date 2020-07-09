@@ -16,41 +16,16 @@ class Archiware_p5_controller extends Module_controller
         $this->module_path = dirname(__FILE__);
     }
 
-    /**
-     * Get archiware_p5 information for serial_number
-     *
-     * @param string $serial serial number
-     **/
-/**
-*    public function get_data($serial_number = '')
-*    {
-*        jsonView(
-*            Archiware_p5_model::select('archiware_p5.*')
-*            ->whereSerialNumber($serial_number)
-*            ->filter()
-*            ->limit(1)
-*            ->first()
-*            ->toArray()
-*        );
-*    }
-**/
-
 		function index()
 		{
 			echo "You've loaded the firewall module!";
 		}
 
-		public function get_archiware_p5()
-		{
-				jsonView(
-								Archiware_p5_model::selectRaw('host_id, count(*) AS count')
-								->filter()
-								->groupBy('host_id')
-								->orderBy('count', 'desc')
-								->get()
-								->toArray()
-						);
-		}
+		/**
+     * Get archiware_p5 information for serial_number
+     *
+     * @param string $serial serial number
+     **/
 
 		public function get_data($serial_number = '')
     {
@@ -63,7 +38,12 @@ class Archiware_p5_controller extends Module_controller
         );
     }
 
-    public function get_list($column = '')
+		/**
+     * Get archiware_p5 information for widget
+     *
+     **/
+
+     public function get_list($column = '')
     {
         jsonView(
             Archiware_p5_model::select($column . ' AS label')

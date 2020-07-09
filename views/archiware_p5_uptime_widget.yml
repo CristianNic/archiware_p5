@@ -1,6 +1,6 @@
 type: scrollbox
 widget_id: archiware_p5-uptime-scrollbox-widget
-api_url: /module/archiware_p5/get_list/uptime
+api_url: /module/archiware_p5/get_list/archiware_p5.uptime
 i18n_title: archiware_p5.widget.uptime_title
 icon: fa-laptop
 listing_link: /show/listing/archiware_p5/archiware_p5
