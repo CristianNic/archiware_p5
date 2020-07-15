@@ -50,15 +50,15 @@ def nsdchat_check():
     dictionary['port']   = int(dictionary['port'])
     dictionary['uptime'] = int(dictionary['uptime'])
 
-    print(dictionary['uptime'])
-
     # format time
-    import time
-    dictionary['uptime'] = time.strftime('%d %H:%M:%S', time.gmtime(dictionary['uptime']))
+    from datetime import datetime, timedelta
 
-    print(dictionary['uptime'])
+    uptime = timedelta(seconds=(dictionary['uptime']))
 
-    return dictionary
+    dictionary['uptime'] = str(uptime)
+
+    return(dictionary)
+
 
 def main():
     """Main"""
