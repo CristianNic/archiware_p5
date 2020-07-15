@@ -13,8 +13,6 @@ reports:
 widgets:
     archiware_p5_host_id:
         view: archiware_p5_host_id_widget
-    archiware_p5_port:
-        view: archiware_p5_port_widget
     archiware_p5_platform:
         view: archiware_p5_platform_widget
     archiware_p5_p5_version:

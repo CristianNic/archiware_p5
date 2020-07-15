@@ -6,7 +6,7 @@ class Archiware_p5_model extends Eloquent
 {
     protected $table = 'archiware_p5';
 
-    //protected $hidden = ['id', 'serial_number'];
+    protected $hidden = ['id', 'serial_number'];
 
     protected $fillable = [
       'serial_number',
@@ -25,7 +25,6 @@ class Archiware_p5_model extends Eloquent
       'device',
       'jukebox',
       'desktop_links',
-    ];
 
-    public $timestamps = false;
+    ];
 }

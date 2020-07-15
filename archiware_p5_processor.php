@@ -1,24 +1,22 @@
 <?php
 
-use CFPropertyList\CFPropertyList;
 use munkireport\processors\Processor;
 
 class Archiware_p5_processor extends Processor
 {
-    public function run($plist)
-	{
-        // If plist is empty, echo out error
-        if ( ! $plist){
-                throw new Exception("Error Processing Request: No property list found", 1);
+    public function run($json)
+    {
+        // Check if data was uploaded
+        if (! $json ) {
+            throw new Exception("Error Processing Request: No JSON file found", 1);
         }
-
-        $parser = new CFPropertyList();
-        $parser->parse($plist, CFPropertyList::FORMAT_XML);
-        $mylist = $parser->toArray();
-
-        $model = Archiware_p5_model::firstOrNew(['serial_number' => $this->serial_number]);
-
-        $model->fill($mylist);
-        $model->save();
-	}
+        // Process json into object thingy
+        $data = json_decode($json, true);
+        $data['serial_number'] = $this->serial_number;
+        Archiware_p5_model::updateOrCreate(
+			                 ['serial_number' => $this->serial_number],
+            $data
+        );
+        return $this;
+    }
 }

@@ -7,6 +7,7 @@ import sys
 import subprocess
 import collections
 import plistlib
+import json
 
 def nsdchat_check():
 
@@ -46,17 +47,12 @@ def nsdchat_check():
 
     dictionary = collections.OrderedDict(zip(keys,values))
 
-    dictionary['port'] = int(dictionary['port'])
+    dictionary['port']   = int(dictionary['port'])
+    dictionary['uptime'] = int(dictionary['uptime'])
 
-    time = round(float(dictionary['uptime']), 1)
-    day = time / (24 * 3600)
-    time = time % (24 * 3600)
-    hour = time / 3600
-    time = time % 3600
-    minutes = time / 60
-    seconds = time
-
-    dictionary['uptime'] = str("%dd %dh %dm" % (day, hour, minutes))
+    # format time
+    import time
+    dictionary['uptime'] = time.strftime('%d %H:%M:%S', time.gmtime(dictionary['uptime']))
 
     return dictionary
 
@@ -81,9 +77,8 @@ def main():
     # Get information about Archiware P5
     result = nsdchat_check()
 
-    # Write results to cache
-    output_plist = open(os.path.join(cachedir, 'archiware_p5.plist'), 'wb')
-    plistlib.dump(result, output_plist, sort_keys=False)
+    with open(os.path.join(cachedir, 'archiware_p5.json'), 'w') as fp:
+        json.dump(result, fp, indent=4)
 
 if __name__ == "__main__":
     main()
