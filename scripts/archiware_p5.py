@@ -50,9 +50,13 @@ def nsdchat_check():
     dictionary['port']   = int(dictionary['port'])
     dictionary['uptime'] = int(dictionary['uptime'])
 
+    print(dictionary['uptime'])
+
     # format time
     import time
     dictionary['uptime'] = time.strftime('%d %H:%M:%S', time.gmtime(dictionary['uptime']))
+
+    print(dictionary['uptime'])
 
     return dictionary
 
@@ -63,20 +67,10 @@ def main():
         print ("ERROR: Archiware P5 is not installed")
         exit(0)
 
-    # Create cache dir if it does not exist
-    cachedir = '%s/cache' % os.path.dirname(os.path.realpath(__file__))
-    if not os.path.exists(cachedir):
-        os.makedirs(cachedir)
-
-    # Skip manual check
-    if len(sys.argv) > 1:
-        if sys.argv[1] == 'manualcheck':
-            print ('Manual check: skipping')
-            exit(0)
-
     # Get information about Archiware P5
     result = nsdchat_check()
 
+    cachedir = '%s/cache' % os.path.dirname(os.path.realpath(__file__))
     with open(os.path.join(cachedir, 'archiware_p5.json'), 'w') as fp:
         json.dump(result, fp, indent=4)
 

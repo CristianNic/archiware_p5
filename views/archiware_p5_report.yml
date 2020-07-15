@@ -1,15 +1,4 @@
 row1:
     archiware_p5_host_id: {  }
-    archiware_p5_platform: {  }
     archiware_p5_p5_version: {  }
     archiware_p5_uptime: {  }
-    archiware_p5_archive_plan: {  }
-    archiware_p5_backup_plan: {  }
-    archiware_p5_sync_plan: {  }
-    archiware_p5_backup2go: {  }
-    archiware_p5_client: {  }
-    archiware_p5_thin_client: {  }
-    archiware_p5_virtual_client: {  }
-    archiware_p5_device: {  }
-    archiware_p5_jukebox: {  }
-    archiware_p5_desktop_links: {  }

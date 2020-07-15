@@ -4,4 +4,4 @@
 rm -f "${MUNKIPATH}preflight.d/archiware_p5.py"
 
 # Remove archiware_p5.txt file
-rm -f "${MUNKIPATH}preflight.d/cache/archiware_p5.plist"
+rm -f "${MUNKIPATH}preflight.d/cache/archiware_p5.json"

@@ -13,29 +13,7 @@ reports:
 widgets:
     archiware_p5_host_id:
         view: archiware_p5_host_id_widget
-    archiware_p5_platform:
-        view: archiware_p5_platform_widget
     archiware_p5_p5_version:
         view: archiware_p5_p5_version_widget
     archiware_p5_uptime:
         view: archiware_p5_uptime_widget
-    archiware_p5_archive_plan:
-        view: archiware_p5_archive_plan_widget
-    archiware_p5_backup_plan:
-        view: archiware_p5_backup_plan_widget
-    archiware_p5_sync_plan:
-        view: archiware_p5_sync_plan_widget
-    archiware_p5_backup2go:
-        view: archiware_p5_backup2go_widget
-    archiware_p5_client:
-        view: archiware_p5_client_widget
-    archiware_p5_thin_client:
-        view: archiware_p5_thin_client_widget
-    archiware_p5_virtual_client:
-        view: archiware_p5_virtual_client_widget
-    archiware_p5_device:
-        view: archiware_p5_device_widget
-    archiware_p5_jukebox:
-        view: archiware_p5_jukebox_widget
-    archiware_p5_desktop_links:
-        view: archiware_p5_desktop_links_widget
