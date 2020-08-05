@@ -28,3 +28,7 @@ Table Schema
 * device          - VARCHAR(255) - If Device is licensed and amount of licenses available
 * jukebox         - VARCHAR(255) - If Jukebox is licensed and amount of licenses available
 * desktop_links   - VARCHAR(255) - If Archive App is installed and amount of licenses available
+
+
+![](https://github.com/CristianNic/archiware_p5/blob/master/listing.jpg)
+
