@@ -3,6 +3,8 @@ Archiware P5 Module
 
 Reports Archiware P5 client data to MunkiReport.
 
+![](https://github.com/CristianNic/archiware_p5/blob/master/listing.jpg)
+
 Notes
 -----
 
@@ -29,6 +31,4 @@ Table Schema
 * jukebox         - VARCHAR(255) - If Jukebox is licensed and amount of licenses available
 * desktop_links   - VARCHAR(255) - If Archive App is installed and amount of licenses available
 
-
-![](https://github.com/CristianNic/archiware_p5/blob/master/listing.jpg)
 
