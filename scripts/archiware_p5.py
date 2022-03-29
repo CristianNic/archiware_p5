@@ -1,4 +1,4 @@
-#!/usr/local/munki/python
+#!/usr/local/munkireport/munkireport-python3
 # Archiware P5 script for MunkiReport
 # by Cristian Niculescu
 
@@ -35,17 +35,17 @@ def nsdchat_check():
                             stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE)
         output, err = proc.communicate()
-        out.append(output)
+        out.append(output.decode())
 
     values = [s.strip('\n') for s in out]
-    values = [s.replace('-1', u'\u221E').rstrip() for s in out]
+    values = [s.replace('-1', '\u221E').rstrip() for s in out]
 
     keys = ['host_id', 'port', 'platform', 'p5_version', 'uptime',
             'archive_plan', 'backup_plan', 'sync_plan', 'backup2go',
             'client', 'thin_client', 'virtual_client', 'device',
             'jukebox', 'desktop_links']
 
-    dictionary = collections.OrderedDict(zip(keys,values))
+    dictionary = collections.OrderedDict(list(zip(keys,values)))
 
     dictionary['port']   = int(dictionary['port'])
     dictionary['uptime'] = int(dictionary['uptime'])
